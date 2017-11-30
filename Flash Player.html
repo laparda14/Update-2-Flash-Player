@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+
+<style id="webmakerstyle">
+
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+<input id="text" type="file">
+<div id="codearea" style="margin-bottom:15px;margin-top:5px"><embed id="player" width="400" height="400" src="" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></div>
+
+<script>
+  var audio_file = document.getElementById("text");
+var audio_player = document.getElementById("player");
+audio_file.onchange = function(){
+  var files = this.files;
+  var file = URL.createObjectURL(files[0]); 
+              audio_player.src = file; 
+};
+
+  
+</script>
+
+<script src="chrome-extension://lkfkkhfhhdkiemehlpkgjeojomhpccnh/lib/screenlog.js"></script><script src="filesystem:chrome-extension://lkfkkhfhhdkiemehlpkgjeojomhpccnh/temporary/script.js">
+</script>
+</body>
+</html>
